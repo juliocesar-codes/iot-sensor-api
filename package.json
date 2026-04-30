@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "express": "^5.2.1",
-    "started": "node.js"
+    "express": "^5.2.1"
   },
   "name": "api_sensor",
   "version": "1.0.0",
@@ -13,5 +12,5 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "��#\u0000 \u0000i\u0000o\u0000t\u0000-\u0000s\u0000e\u0000n\u0000s\u0000o\u0000r\u0000-\u0000a\u0000p\u0000i\u0000\r\u0000 \u0000"
 }
