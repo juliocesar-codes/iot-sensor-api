@@ -3,8 +3,8 @@
 #include <DHT.h>
 
 // ====== WIFI ======
-#define WIFI_SSID ""
-#define WIFI_PASS ""
+#define WIFI_SSID "iPhone 13"
+#define WIFI_PASS "md123456"
 
 // ====== DHT11 ======
 #define DHTPIN 4
@@ -13,7 +13,7 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 // ===== URL DA API (Render) =====
-String serverName = "https://api-sensor.onrender.com/sensor";
+String serverName = "https://iot-sensor-api-u13u.onrender.com/sensor";
 
 // ===== CONTROLE =====
 float ultimaTemp = -1000;
@@ -28,7 +28,7 @@ void setup() {
   Serial.print("Conectando ao WiFi");
   WiFi.begin(WIFI_SSID, WIFI_PASS);
 
-  while(WiFi.status != WL_CONNECTED){
+  while(WiFi.status() != WL_CONNECTED){
     delay(500);
     Serial.print(".");
   }
@@ -49,7 +49,7 @@ void loop() {
   float hum = dht.readHumidity();
 
   if(isnan(temp) || isnan(hum)){
-    Serial.pritln("Erro ao ler DHT11");
+    Serial.println("Erro ao ler DHT11");
     delay(2000);
     return;
   }

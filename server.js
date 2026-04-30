@@ -3,6 +3,7 @@ const app = express();
 
 let dados = []
 
+
 app.get("/sensor", (req,res) =>{
     const {temp, hum} = req.query;
 
